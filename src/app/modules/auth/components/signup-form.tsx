@@ -1,18 +1,18 @@
 import Link from "next/link";
 import CheckboxAndButton from "./signup-client";
-// import AuthActions from "../actions/auth-actions";
+import { createUser } from "../../api/api";
+import { redirect } from "next/navigation";
+import React from "react";
 
 export default function SignUpForm() {
+  const handleSubmit = async (formData: FormData) => {};
   return (
     <main className="bg-gray-100 h-screen p-[10%]">
       <div
         className="rounded-lg border-[#d4d4d4] border-[1px] bg-white p-[30px] w-[30%] mx-auto"
         id="card"
       >
-        <form
-          className="grid justify-items-start gap-4"
-          // action={AuthActions.createAccount}
-        >
+        <form className="grid justify-items-start gap-4" action={createUser}>
           <div className="font-bold text-2xl" id="title">
             Sing up
           </div>
